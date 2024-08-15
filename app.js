@@ -6,7 +6,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/clg");
 const questionSchema = Schema({
   question: String,
   keyword: String,
-  options: String,
+  options: [String],
   answer: String,
 });
 const Question = mongoose.model("Question", questionSchema);
